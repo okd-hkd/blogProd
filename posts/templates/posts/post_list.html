@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block body %}
+<div class="row container">
+<div class="col-md-9">
+<br>
+<h3>{% trans "Latest posts" %}</h3>
+<br>
+
+{% for post in post_list %}
+
+<a href="{% url 'posts:post_detail' post.id %}" class="list-title">{{ post.title }}</a>
+<br>
+{{ post.published }}
+
+<br><br>
+<img src="{{ post.image.url }}" class="img-fluid rounded " style="max-height: 200px; max-width: 40%"/>
+<br><br>
+<!--{{ post.summary }}-->
+<br/><br/>
+{% endfor %}
+</div>
+
+<div class="col-md-3">
+<br><br>
+<a class="twitter-timeline" data-lang="en" data-width="250" data-height="300" data-theme="light" href="https://twitter.com/TokadaTweet?ref_src=twsrc%5Etfw">Tweets by TokadaTweet</a>
+
+</div>
+</div>
+
+
+{% endblock %}
+
+
+
+

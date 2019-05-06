@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-21 00:01+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: myblogapp/settings.py:125
+msgid "English"
+msgstr "English"
+
+#: myblogapp/settings.py:126
+msgid "日本語"
+msgstr "日本語"
+
+#: myblogapp/settings.py:127
+msgid "中文简体"
+msgstr "中文简体"
+
+#: posts/templates/base.html:23
+msgid "Okada's blog"
+msgstr "冈田的博客"
+
+#: posts/templates/base.html:59
+msgid "前へ"
+msgstr "上一页"
+
+#: posts/templates/base.html:77
+msgid "次へ"
+msgstr "下一页"
+
+#: posts/templates/navigation.html:3
+msgid "岡田のブログ"
+msgstr "冈田的博客"
+
+#: posts/templates/posts/post_detail.html:23
+msgid "HTML Comment Box"
+msgstr "HTML Comment Box"
