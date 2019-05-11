@@ -8,7 +8,8 @@ app_name = 'posts'
 
 urlpatterns = [
     path('', PostListView.as_view(), name='index'),
-    # path('', views.index, name='index'),
+    path('about/', views.about, name='about'),
+    path('contact/', views.contact, name='contact'),
     re_path(r'(?P<post_id>[0-9]+)/$', views.post_detail, name='post_detail'),
    ]
 

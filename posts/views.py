@@ -27,5 +27,16 @@ def index(request):
 
 
 def post_detail(request, post_id):
+    """detail page"""
     post = get_object_or_404(Post, pk=post_id)
     return render(request, 'posts/post_detail.html', {'post': post})
+
+
+def about(request):
+    """about page"""
+    return render(request, 'posts/about.html')
+
+
+def contact(request):
+    """contact page"""
+    return render(request, 'posts/contact.html')
