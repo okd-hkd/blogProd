@@ -1,5 +1,5 @@
 from django.urls import path, include, re_path
-from posts.views import PostListView
+from posts.views import PostListView, emailview, successview
 
 from posts.models import Post
 from . import views
@@ -11,7 +11,9 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
     re_path(r'(?P<post_id>[0-9]+)/$', views.post_detail, name='post_detail'),
-   ]
+    path('email/', views.emailview, name='email'),
+    path('success/', views.successview, name='success')
+]
 
 
 # urlpatterns += i18n_patterns(

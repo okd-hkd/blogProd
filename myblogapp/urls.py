@@ -76,12 +76,14 @@ class LatestPostFeed(Feed):
 urlpatterns = [
     # path('<url>', views, nickname) nicknames allow us to chane URLs without worrying rewriting urlpatterns
     # path('__debug__/', include(debug_toolbar.urls)),
+path('', views.top, name='top'),
     path('posts/', include('posts.urls')),
     path('admin/', admin.site.urls),
     path('markdownx/', include('markdownx.urls')),
     path('i18n/', include('django.conf.urls.i18n')),
     path('sitemap.xml/', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
     path('latest/feed/', LatestPostFeed()),
+    path('', views.top, name='top'),
 ]
 
 urlpatterns += i18n_patterns(

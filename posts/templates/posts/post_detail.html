@@ -11,8 +11,11 @@
 <br/><br/>
 {{ post.published }}
 <br/><br/>
-<img src="{{ post.image.url }}" class="img-fluid rounded" style="max-height: 200px;"/>
+{% if post.image %}
+    <img src="{{ post.image.url|default_if_none:'#' }}" class="img-fluid rounded" style="max-height: 200px;"/>
 <br/><br/>
+ {% endif %}
+
 {{ post.body_to_markdown | safe }}
 <br/><br/>
 

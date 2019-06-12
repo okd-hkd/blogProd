@@ -7,7 +7,7 @@ from django.utils.translation import gettext_lazy as _
 class Post(models.Model):
     title = models.CharField(max_length=100)
     published = models.DateTimeField()
-    image = models.ImageField(upload_to='media/', blank=True)  # ドメイン + MEDIA_URL + upload_to に画像を保存してpathをDBに保存
+    image = models.ImageField(upload_to='media/', null=True)  # ドメイン + MEDIA_URL + upload_to に画像を保存してpathをDBに保存
     body = MarkdownxField('body', help_text='Markdown')
 
     def __str__(self):

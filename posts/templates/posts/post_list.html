@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
+
 {% block body %}
 <div class="row container">
 <div class="col-md-9">
@@ -13,9 +14,14 @@
 <br>
 {{ post.published }}
 
-<br><br>
-<img src="{{ post.image.url }}" class="img-fluid rounded " style="max-height: 200px; max-width: 40%"/>
-<br><br>
+    {% if post.image %}
+
+    <br><br>
+    <img src="{{ post.image.url }}" class="img-fluid rounded " style="max-height: 200px; max-width: 40%"/>
+    <br><br>
+
+    {% endif %}
+
 <!--{{ post.summary }}-->
 <br/><br/>
 {% endfor %}
