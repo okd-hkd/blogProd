@@ -76,7 +76,6 @@ class LatestPostFeed(Feed):
 urlpatterns = [
     # path('<url>', views, nickname) nicknames allow us to chane URLs without worrying rewriting urlpatterns
     # path('__debug__/', include(debug_toolbar.urls)),
-path('', views.top, name='top'),
     path('posts/', include('posts.urls')),
     path('admin/', admin.site.urls),
     path('markdownx/', include('markdownx.urls')),
@@ -86,9 +85,9 @@ path('', views.top, name='top'),
     path('', views.top, name='top'),
 ]
 
-urlpatterns += i18n_patterns(
-   path('', include('posts.urls')),
-)
+# urlpatterns += i18n_patterns(
+#   path('', include('posts.urls')),
+#)
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
