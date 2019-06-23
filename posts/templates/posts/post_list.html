@@ -13,6 +13,7 @@
 <a href="{% url 'posts:post_detail' post.id %}" class="list-title">{{ post.title }}</a>
 <br>
 {{ post.published }}
+    {{ post.category.name }}
 
     {% if post.image %}
 
@@ -22,22 +23,50 @@
 
     {% endif %}
 
-<!--{{ post.summary }}-->
 <br/><br/>
 {% endfor %}
 </div>
 
-<div class="col-md-3">
+    <div class="col-md-3">
+        <br><br>
+            <a class="twitter-timeline" data-lang="en" data-width="250" data-height="200" data-theme="light" href="https://twitter.com/TokadaTweet?ref_src=twsrc%5Etfw">Tweets by TokadaTweet</a>
 <br><br>
-<a class="twitter-timeline" data-lang="en" data-width="250" data-height="300" data-theme="light" href="https://twitter.com/TokadaTweet?ref_src=twsrc%5Etfw">Tweets by TokadaTweet</a>
+<p>Web development</p>
+<!--{% for post in post_list %}-->
 
+<<<<<<< Updated upstream
     <br>
     <br>
 
 
 
+=======
+<!--{% ifequal post.category.name web_development %}-->
+
+<!--{{ post.title }}<br>-->
+
+<!--{% endifequal %}-->
+
+<!--{% endfor %}-->
+<!--<br><br>-->
+
+<br><br>
+<p>{{ catepost.category.name }}</p>
+<p>Computer Science</p>
+{% for catepost in post_list %}
+
+{{ catepost.category.name }}
+
+<!--{% ifequal catepost.category.name Computer_Science %}
+{{ catepost.title }}<br>
+{% endifequal %}-->
+{% endfor %}
+
+    </div>
+>>>>>>> Stashed changes
 </div>
-</div>
+
+
 
 
 {% endblock %}
