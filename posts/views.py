@@ -14,7 +14,7 @@ class PostListView(ListView):
     # context_object_name = 'posts'
 
     def get_queryset(self):
-        # 公開フラグがTrueで、作成日順に並び替え
+        # 作成日順に並び替え
         return super().get_queryset().order_by('-published')
 
 
