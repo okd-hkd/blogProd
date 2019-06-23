@@ -11,9 +11,12 @@
 {% for post in post_list %}
 
 <a href="{% url 'posts:post_detail' post.id %}" class="list-title">{{ post.title }}</a>
-<br>
+    <br>
 {{ post.published }}
-    {{ post.category.name }}
+        <br>
+
+<p> {% trans "Category: " %} <span class="category_name"><b> {{ post.category.name }}</b></span>
+</p>
 
     {% if post.image %}
 
@@ -30,40 +33,27 @@
     <div class="col-md-3">
         <br><br>
             <a class="twitter-timeline" data-lang="en" data-width="250" data-height="200" data-theme="light" href="https://twitter.com/TokadaTweet?ref_src=twsrc%5Etfw">Tweets by TokadaTweet</a>
+
+
+        <br><br>
+
 <br><br>
-<p>Web development</p>
-<!--{% for post in post_list %}-->
+<p></p>
 
-<<<<<<< Updated upstream
-    <br>
-    <br>
+        <!--category list-->
 
+<!--<p>Computer Science</p>-->
+<!--{% for catepost in post_list %}-->
 
+<!--{{ catepost.category.name }}-->
 
-=======
-<!--{% ifequal post.category.name web_development %}-->
-
-<!--{{ post.title }}<br>-->
-
+<!--{% ifequal catepost.category.name Web_devlopment %}-->
+<!--{{ catepost.title }}<br>-->
 <!--{% endifequal %}-->
-
 <!--{% endfor %}-->
-<!--<br><br>-->
-
-<br><br>
-<p>{{ catepost.category.name }}</p>
-<p>Computer Science</p>
-{% for catepost in post_list %}
-
-{{ catepost.category.name }}
-
-<!--{% ifequal catepost.category.name Computer_Science %}
-{{ catepost.title }}<br>
-{% endifequal %}-->
-{% endfor %}
 
     </div>
->>>>>>> Stashed changes
+
 </div>
 
 

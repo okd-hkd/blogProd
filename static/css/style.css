@@ -87,3 +87,11 @@ footer {
     margin: 0;
     padding: 0;
 }
+
+.category_name {
+    display: inline;
+    background-color: #e35a4d;
+    padding: 3px 5px;
+    font-size: .8em;
+    color: #fff;
+}
