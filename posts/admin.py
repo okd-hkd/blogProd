@@ -4,8 +4,6 @@ from markdownx.admin import MarkdownxModelAdmin
 from .models import Post, CategoryOfPost
 
 
-
-
 admin.site.register(Post, MarkdownxModelAdmin)
 admin.site.register(CategoryOfPost)
 

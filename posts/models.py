@@ -16,8 +16,10 @@ class CategoryOfPost(models.Model):
 class Post(models.Model):
 
      title = models.CharField(max_length=100)
-     category = models.ForeignKey(CategoryOfPost, on_delete=models.SET_NULL, null=True)
+     category = models.ForeignKey(CategoryOfPost, on_delete=models.SET_NULL, blank=True, null=True)
      published = models.DateTimeField()
+     released_date = models.DateTimeField(
+            blank=True, null=True)
      image = models.ImageField(upload_to='media/', blank=True, null=True)  # ドメイン + MEDIA_URL + upload_to に画像を保存してpathをDBに保存
      body = MarkdownxField('body', help_text='Markdown')
 

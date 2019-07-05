@@ -1,11 +1,26 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load static %}
+
 
 {% block body %}
 
-<h2>Welcome to my blog.</h2>
-<p>This blog is built using ...</p>
-<p>Python(Django), Bootstrap, EC2, PostgreSQL, nginX. </p>
+<h2>Welcome to my blog</h2>
+
+<hr>
+
+{% trans "This blog is built using" %}
+{% trans "Python(Django), Bootstrap, EC2, PostgreSQL, and Nginx. " %}
+<br><br>
 
 
+
+<section>
+
+<img class="logos" src="{% static 'img/AWS-Cloud-alt_light-bg@4x.png' %}" alt="logo" width="25%" height="20%">
+<img class="logos_djiango" src="{% static 'img/django-logo-positive.png' %}" alt="logo" width="30%" height="20%">
+<img class="logos" src="{% static 'img/PostgreSQL_logo.3colors.120x120.png' %}" alt="logo" width="25%" height="20%">
+<img class="logos_nginx" src="{% static 'img/nginx.svg' %}" alt="logo" width="25%" height="20%">
+
+</section>>
 {% endblock %}

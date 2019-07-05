@@ -95,3 +95,26 @@ footer {
     font-size: .8em;
     color: #fff;
 }
+
+.logos {
+    display: inline-block;
+    height: 150px;
+    width: 200px;
+    margin: 0px 20px;
+}
+
+logos_djiango {
+    display: inline-block;
+    height: 80px;
+    width: 120px;
+    margin-top: 20px;
+    padding-top: 30px;
+}
+
+.logos_nginx {
+    display: inline-block;
+    height: 150px;
+    width: 200px;
+    margin-top: 20px;
+    padding-top: 30px;
+}

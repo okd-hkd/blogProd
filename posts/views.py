@@ -3,6 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic import ListView
 from django.core.paginator import Paginator
 from django.core.mail import send_mail, BadHeaderError
+from django.utils import timezone
 
 from .forms import ContactForm
 from .models import Post
@@ -15,18 +16,13 @@ class PostListView(ListView):
 
     def get_queryset(self):
         # 作成日順に並び替え
-        return super().get_queryset().order_by('-published')
+        return super().get_queryset().filter(released_date__lte=timezone.now()).order_by('-released_date')
 
 
-"""
-def index(request):
-    # return HttpResponse("Hello World! このページは投稿のインデックスです。")
-    postsPub = Post.objects.order_by('-published')
-    paginator = Paginator(postsPub, 5)  # Show 5 contacts per page
-    page = request.GET.get('page')
-    posts = paginator.get_page(page)
-    return render(request, 'posts/index.html', {'posts': posts})
-"""
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["posts"] = Post.objects.all().order_by('-published').filter(released_date__lte=timezone.now()).order_by('-released_date')
+        return context
 
 
 def post_detail(request, post_id):

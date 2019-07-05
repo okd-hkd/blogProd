@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-16 12:51+0900\n"
+"POT-Creation-Date: 2019-07-05 20:27+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,26 +18,49 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: posts/models.py:11
-msgid "body"
-msgstr "body"
+#: myblogapp/settings.py:128
+msgid "English"
+msgstr ""
+
+#: myblogapp/settings.py:129
+msgid "日本語"
+msgstr ""
 
 #: posts/templates/base.html:23
 msgid "Okada's blog"
 msgstr "Okada's blog"
 
-#: posts/templates/base.html:36
-msgid "岡田のブログ"
-msgstr "Okada's blog"
-
-#: posts/templates/base.html:119
+#: posts/templates/base.html:68
 msgid "前へ"
 msgstr "Previous"
 
-#: posts/templates/base.html:137
+#: posts/templates/base.html:86
 msgid "次へ"
 msgstr "Next"
 
-#: posts/templates/posts/post_detail.html:23
+#: posts/templates/navigation.html:3
+msgid "岡田のブログ"
+msgstr "Okada's blog"
+
+#: posts/templates/posts/post_detail.html:37
 msgid "HTML Comment Box"
 msgstr "HTML Comment Box"
+
+#: posts/templates/posts/post_list.html:9
+msgid "Latest posts"
+msgstr "最新記事"
+
+#: posts/templates/posts/post_list.html:19
+msgid "Category: "
+msgstr "カテゴリ"
+
+#: posts/templates/posts/top.html:12
+msgid "This blog is built using"
+msgstr ""
+
+#: posts/templates/posts/top.html:13
+msgid "Python(Django), Bootstrap, EC2, PostgreSQL, and Nginx. "
+msgstr ""
+
+#~ msgid "body"
+#~ msgstr "body"
