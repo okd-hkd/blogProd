@@ -1,7 +1,11 @@
+
+
+
 {% extends "base.html" %}
 {% load i18n %}
 
 {% block body %}
+
 
 <div class="row container">
     <div class="col-md-9">
@@ -9,13 +13,13 @@
     <!-- title  -->
     <section>
         <br>
-        <h3>{% trans "Latest posts" %}</h3>
+        <h3>{% trans "Sort Results" %}</h3>
         <br>
     </section>
 
 
     <!-- LATEST POSTS  -->
-        {% for post in post_list %}
+        {% for post in categoryList %}
 <section>
         <a href="{% url 'posts:post_detail' post.id %}" class="list-title">{{ post.title }}</a>
         <br>
@@ -69,16 +73,13 @@
                 <a class="twitter-timeline" data-lang="en" data-width="250" data-height="200" data-theme="light" href="https://twitter.com/TokadaTweet?ref_src=twsrc%5Etfw">{% trans "Tweets by TokadaTweet" %}</a>
             <br><br>
      </section>
+</div>
 
-    <!-- web dev list -->
-    <h5>2019年のWeb developmentの記事一覧</h5>
-            {% for post in posts %}
-              {% if post.category.name == "Web Devlopment" %}
-                <a href="{% url 'posts:post_detail' post.id %}" class="small_list-title">{{ post.title | linebreaksbr }}</a><br>
-              {% endif %}
-            {% endfor %}
-        </div>
-    </div>
 
 
 {% endblock %}
+
+
+
+
+

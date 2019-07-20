@@ -8,11 +8,11 @@
 <h2>Welcome to my blog</h2>
 
 <hr>
-
-{% trans "This blog is built using" %}
+<section>
+{% trans "This blog is built with these stack." %}
 {% trans "Python(Django), Bootstrap, EC2, PostgreSQL, and Nginx. " %}
 <br><br>
-
+</section>
 
 
 <section>
@@ -22,5 +22,5 @@
 <img class="logos" src="{% static 'img/PostgreSQL_logo.3colors.120x120.png' %}" alt="logo" width="25%" height="20%">
 <img class="logos_nginx" src="{% static 'img/nginx.svg' %}" alt="logo" width="25%" height="20%">
 
-</section>>
+</section>
 {% endblock %}

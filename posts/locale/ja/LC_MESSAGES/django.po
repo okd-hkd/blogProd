@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-05 20:34+0900\n"
+"POT-Creation-Date: 2019-07-20 15:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,6 +24,10 @@ msgstr "English"
 
 #: myblogapp/settings.py:129
 msgid "日本語"
+msgstr ""
+
+#: myblogapp/settings.py:130
+msgid "中文简体"
 msgstr ""
 
 #: posts/templates/base.html:23
@@ -42,24 +46,45 @@ msgstr "次へ"
 msgid "岡田のブログ"
 msgstr "岡田のブログ"
 
-#: posts/templates/posts/post_detail.html:37
+#: posts/templates/posts/post_detail.html:16
+#: posts/templates/posts/post_list.html:25
+#: posts/templates/posts/searchlist.html:29
+msgid "Category: "
+msgstr "カテゴリ"
+
+#: posts/templates/posts/post_detail.html:46
 msgid "HTML Comment Box"
 msgstr "HTML Comment Box"
 
-#: posts/templates/posts/post_list.html:9
+#: posts/templates/posts/post_list.html:12
 msgid "Latest posts"
-msgstr ""
+msgstr "最新記事"
 
-#: posts/templates/posts/post_list.html:19
-msgid "Category: "
-msgstr ""
+#: posts/templates/posts/post_list.html:28
+#: posts/templates/posts/searchlist.html:32
+msgid "Tag: "
+msgstr "タグ"
+
+#: posts/templates/posts/post_list.html:49
+#: posts/templates/posts/searchlist.html:53
+msgid "Sort by Category"
+msgstr "カテゴリで絞り込み"
+
+#: posts/templates/posts/post_list.html:69
+#: posts/templates/posts/searchlist.html:73
+msgid "Tweets by TokadaTweet"
+msgstr "OKDのつぶやき"
+
+#: posts/templates/posts/searchlist.html:16
+msgid "Sort Results"
+msgstr "絞り込み結果"
 
 #: posts/templates/posts/top.html:12
-msgid "This blog is built using"
+msgid "This blog is built with these stack."
 msgstr ""
 
 #: posts/templates/posts/top.html:13
-msgid "Python(Django), Bootstrap, EC2, PostgreSQL, and Nginx. "
+msgid "Python(Django), Bootstrap, EC2, PostgreSQL, gunicorn and Nginx. "
 msgstr ""
 
 #~ msgid "Japanese"

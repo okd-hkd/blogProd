@@ -10,15 +10,13 @@
 
     <h1>Contact</h1>
 
-    <!--<form action="" method="post">-->
 
-     <form ontact-form method="POST" action="https://formspree.io/t.okada@oliver-f.net">
+     <form contact-form method="POST" action="https://formspree.io/t.okada@oliver-f.net">
            {% csrf_token %}
 
             <div class="form-group">
               <label for="contact-name">Your email</label>
               <input type="email" name="email" placeholder="Your email" class="form-control" id="contact-name" >
-            <!-- <input type="name" name="name" class="form-control" id="contact-name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" >  -->
             </div>
 
             <div class="form-group">
@@ -26,32 +24,10 @@
               <textarea class="form-control" name="message" id="contact-message" placeholder="Your Message"></textarea>
             </div>
 
-            <button type="submit">Send</button>
+            <button class="btn btn-outline-success" type="submit">Send</button>
         </form>
 
 
-        <!--<table>-->
-            <!--{{ form.as_table }}-->
-            <!--<tr>-->
-            <!--<td colspan='2'>-->
-                <!--<input type="submit" value="Submit">-->
-            <!--</td>-->
-            <!--</tr>-->
-        <!--</table>-->
-    <!--</form>-->
-
-<!--<form action="https://mailthis.to/t.okada@oliver-f.net"-->
-    <!--method="POST" encType="multipart/form-data">-->
-    <!--<input type="text" name="name" placeholder="Your name"> <br>-->
-    <!--<input type="email" name="_replyto" placeholder="Your email"><br>-->
-    <!--<textarea name="message" placeholder="Enter your message here"></textarea><br>-->
-    <!--<input type="file" name="file" placeholder="Attachments (optional)"><br>-->
-    <!--<input type="hidden" name="_subject" value="Contact form submitted">-->
-    <!--<input type="hidden" name="_after" value="https://myhomepage.net/">-->
-    <!--<input type="hidden" name="_honeypot" value="">-->
-    <!--<input type="hidden" name="_confirmation" value="">-->
-    <!--<input type="submit" value="Send"><br>-->
-<!--</form>-->
 
 </div>
 </div>

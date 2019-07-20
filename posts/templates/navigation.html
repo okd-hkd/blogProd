@@ -5,20 +5,15 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-             <!--<li class="nav-item">-->
-                <!--<a class="nav-link" href="https://okd-blog.net/">Top</a>-->
-            <!--</li>-->
             <li class="nav-item">
                 <a class="nav-link" href="https://okd-blog.net/posts/">Blog<span class="sr-only">(current)</span></a>
             </li>
-
             <li class="nav-item">
-                <a class="nav-link" href="https://okd-blog.net/posts/email/">Contact</a>
+                <a class="nav-link" href="{% url 'posts:email' %}">Contact</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="https://github.com/okadateru">Github</a>
@@ -26,7 +21,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="https://okd-blog.net/latest/feed/">RSS</a>
             </li>
-
         </ul>
 
 

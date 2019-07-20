@@ -11,6 +11,13 @@ from django.conf import settings
 
 class PostListView(ListView):
     model = Post
+
+    # form = PostSearchForm(request.GET)
+    # if form.is_valid():
+    #     category_id = form.cleaned_data.get('カテゴリ名')
+    #
+    # if category_id:
+
     paginate_by = 5
     # context_object_name = 'posts'
 
@@ -20,6 +27,7 @@ class PostListView(ListView):
 
 
     def get_context_data(self, **kwargs):
+        # クエリセット名posts　
         context = super().get_context_data(**kwargs)
         context["posts"] = Post.objects.all().order_by('-published').filter(released_date__lte=timezone.now()).order_by('-released_date')
         return context
@@ -71,3 +79,11 @@ def successview(request):
 def top(request):
     """contact page"""
     return render(request, 'posts/top.html')
+
+
+def searchlistview(request):
+    category = request.GET.get('category')
+    categoryList = Post.objects.filter(category__name=category, released_date__lte=timezone.now()).order_by('-released_date')
+
+
+    return render(request, 'posts/searchlist.html', {'categoryList':categoryList,})
