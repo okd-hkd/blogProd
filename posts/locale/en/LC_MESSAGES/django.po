@@ -50,7 +50,7 @@ msgstr "Okada's blog"
 #: posts/templates/posts/post_list.html:25
 #: posts/templates/posts/searchlist.html:29
 msgid "Category: "
-msgstr "カテゴリ"
+msgstr ""
 
 #: posts/templates/posts/post_detail.html:46
 msgid "HTML Comment Box"
@@ -58,7 +58,7 @@ msgstr "HTML Comment Box"
 
 #: posts/templates/posts/post_list.html:12
 msgid "Latest posts"
-msgstr "最新記事"
+msgstr ""
 
 #: posts/templates/posts/post_list.html:28
 #: posts/templates/posts/searchlist.html:32
@@ -70,7 +70,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Category: "
 msgid "Sort by Category"
-msgstr "カテゴリ"
+msgstr ""
 
 #: posts/templates/posts/post_list.html:69
 #: posts/templates/posts/searchlist.html:73

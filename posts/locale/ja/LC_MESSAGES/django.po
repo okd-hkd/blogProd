@@ -44,7 +44,7 @@ msgstr "次へ"
 
 #: posts/templates/navigation.html:3
 msgid "岡田のブログ"
-msgstr "岡田のブログ"
+msgstr "Okada's blog"
 
 #: posts/templates/posts/post_detail.html:16
 #: posts/templates/posts/post_list.html:25

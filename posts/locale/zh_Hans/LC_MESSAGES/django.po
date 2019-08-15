@@ -50,7 +50,7 @@ msgstr "冈田的博客"
 #: posts/templates/posts/post_list.html:25
 #: posts/templates/posts/searchlist.html:29
 msgid "Category: "
-msgstr "种类"
+msgstr "种类: "
 
 #: posts/templates/posts/post_detail.html:46
 msgid "HTML Comment Box"
@@ -67,8 +67,7 @@ msgstr "标识符"
 
 #: posts/templates/posts/post_list.html:49
 #: posts/templates/posts/searchlist.html:53
-#, fuzzy
-#| msgid "Category: "
+
 msgid "Sort by Category"
 msgstr "按种类分类"
 
@@ -79,7 +78,7 @@ msgstr "推特"
 
 #: posts/templates/posts/searchlist.html:16
 msgid "Sort Results"
-msgstr "分类结果 "
+msgstr "分类结果"
 
 #: posts/templates/posts/top.html:12
 #, fuzzy

@@ -32,6 +32,8 @@ class Post(models.Model):
      # ドメイン + MEDIA_URL + upload_to に画像を保存してpathをDBに保存
      body = MarkdownxField('body', help_text='Markdown')
 
+
+     #　返り値が、アドミンページに表示されるテーブルの文字列になる
      def __str__(self):
          return self.title
 
