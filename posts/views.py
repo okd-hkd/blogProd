@@ -12,13 +12,8 @@ from django.conf import settings
 class PostListView(ListView):
     model = Post
 
-    # form = PostSearchForm(request.GET)
-    # if form.is_valid():
-    #     category_id = form.cleaned_data.get('カテゴリ名')
-    #
-    # if category_id:
 
-    paginate_by = 5
+    paginate_by = 7
     # context_object_name = 'posts'
 
     def get_queryset(self):

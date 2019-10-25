@@ -19,7 +19,9 @@
 <section>
         <a href="{% url 'posts:post_detail' post.id %}" class="list-title">{{ post.title }}</a>
         <br>
-        {{ post.published }}
+        <span>{% trans "Published on " %}{{ post.published }} </span>
+        <br>
+        <span>{% trans "Updated on " %}{{post.released_date}}</span>
         <br>
 
         <p> {% trans "Category: " %}
@@ -29,7 +31,7 @@
             <!--<span class="tag_name"> {{ post.tag.name }}</span>-->
 
 
-        <!-- SHow img if any -->
+        <!-- Show img if any -->
             {% if post.image %}
             <img src="{{ post.image.url }}" class="img-fluid rounded " style="max-height: 200px; max-width: 40%"/>
             <br><br>
@@ -54,13 +56,16 @@
   <option value="Computer Science">Computer Science</option>
   <option value="Frontend">Frontend</option>
   <option value="Database">Database</option>
-  <option value="Web Devlopment">Web Devlopment</option>
+  <option value="Web Development">Web Development</option>
+  <option value="DevOps">DevOps</option>
   <option value="Others">Others</option>
               </select>
               <input class="btn btn-outline-success" type="submit" value="Search">
           </form>
           <hr>
     </section>
+
+
 
 
     <!-- twitter -->
@@ -73,12 +78,13 @@
     <!-- web dev list -->
     <h5>2019年のWeb developmentの記事一覧</h5>
             {% for post in posts %}
-              {% if post.category.name == "Web Devlopment" %}
+              {% if post.category.name == "Web Development" %}
                 <a href="{% url 'posts:post_detail' post.id %}" class="small_list-title">{{ post.title | linebreaksbr }}</a><br>
               {% endif %}
             {% endfor %}
         </div>
     </div>
+
 
 
 {% endblock %}

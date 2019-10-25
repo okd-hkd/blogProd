@@ -25,6 +25,8 @@ body {
      font-family: 'Roboto', sans-serif;]
      background-color: #7cacf9;
      opacity: .9;
+    overflow: hidden;
+  height:100%;s
 }
 
 .list-title {
@@ -66,14 +68,16 @@ footer {
 
 .col-md-9 {
      border: solid;
-     border-width: 0px 3px 0px 0em;
+     border-width: 0px 1px 0px 0em;
      border-color: rgba(0, 100, 30, .4);
  }
 
 .col-md-3 {
      border: solid;
      border-width: 0px 0px 0px 0em;
-     border-color: rgba(0, 100, 30, .4);
+     border-color: rgba(0, 0, 30, .4);
+     overflow-y: auto;
+
  }
 
 .footer_icon {
@@ -90,10 +94,12 @@ footer {
 
 .category_name {
     display: inline;
-    background-color: #e35a4d;
+    background-color: ghostwhite;
+    border-style: solid;
+    border-color: indianred;
     padding: 3px 5px;
     font-size: .8em;
-    color: #fff;
+    color: indianred;
 }
 
 .logos {
@@ -117,4 +123,8 @@ logos_djiango {
     width: 200px;
     margin-top: 20px;
     padding-top: 30px;
+}
+
+.small_list-title {
+    position: sticky;
 }
