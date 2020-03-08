@@ -1,4 +1,4 @@
-## This is Teru my blog's production code.
+## This is my blog's production code.
 
 - A blog with RSS fucntion.
 - Auto-sitemap-creation for better SEO.
