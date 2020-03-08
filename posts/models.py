@@ -24,7 +24,7 @@ class Post(models.Model):
      title = models.CharField(max_length=100)
      category = models.ForeignKey(CategoryOfPost, on_delete=models.SET_NULL, blank=True, null=True)
      tag = models.ManyToManyField(Tag, verbose_name='タグ',  blank=True, null=True)
-     published = models.DateTimeField()
+     published = models.DateTimeField(blank=True, null=True,)
      released_date = models.DateTimeField(
             blank=True, null=True)
      image = models.ImageField(upload_to='media/', blank=True, null=True)
