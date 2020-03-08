@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% block body %}
 {% load i18n %}
@@ -8,58 +7,62 @@
 <div class="post_detail">
 
 
-<br/>
-    <h3>
-<a href="{% url 'posts:post_detail' post.id %}">{{ post.title }}</a>
-    </h3>
+  <br />
+  <h3>
+    <a href="{% url 'posts:post_detail' post.id %}">{{ post.title }}</a>
+  </h3>
 
-    <p>{% trans "Category: " %}
-        <span class="category_name"> {{ post.category.name }}</span>
-    </p>
+  <p>{% trans "Category: " %}
+    <span class="category_name"> {{ post.category.name }}</span>
+  </p>
 
-<br/><br/>
-{{ post.published }}
-<br/><br/>
-{% if post.image %}
-    <img src="{{ post.image.url|default_if_none:'#' }}" class="img-fluid rounded" style="max-height: 200px;"/>
-<br/><br/>
- {% endif %}
+  <br /><br />
+  {{ post.published }}
+  <br /><br />
+  {% if post.image %}
+  <img src="{{ post.image.url|default_if_none:'#' }}" class="img-fluid rounded" style="max-height: 200px;" />
+  <br /><br />
+  {% endif %}
 
-{{ post.body_to_markdown | safe }}
-<br/><br/>
+  {{ post.body_to_markdown | safe }}
+  <br /><br />
 
-<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
 
-    <a href="https://twitter.com/TokadaTweet?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @TokadaTweet</a>
+  <a href="https://twitter.com/TokadaTweet?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+    data-show-count="false">Follow @TokadaTweet</a>
 
-<!--twitter share button-->
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <!--twitter share button-->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
-<!-- 日本語化したJSを読み込む -->
-<script type="text/javascript" src="/include/js/htmlcommentbox.js"></script>
+  <!-- 日本語化したJSを読み込む -->
+  <script type="text/javascript" src="/include/js/htmlcommentbox.js"></script>
 
-<!-- begin wwww.htmlcommentbox.com -->
 
-{% load i18n %}
 
-<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">{% trans "HTML Comment Box" %}</a> is loading comments...</div>
-<link rel="stylesheet" type="text/css"
-      href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0"/>
-<script type="text/javascript" id="hcb"> /*<!--*/
-if (!window.hcb_user) {
-    hcb_user = {};
-}
-(function () {
-    var s = document.createElement("script"), l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"),
-        h = "https://www.htmlcommentbox.com";
-    s.setAttribute("type", "text/javascript");
-    s.setAttribute("src", h + "/jread?page=" + encodeURIComponent(l).replace("+", "%2B") + "&mod=%241%24wq1rdBcg%248RdSS2yy7xikjf%2Ff2EMdM%2F" + "&opts=16862&num=10&ts=1554864192250");
-    if (typeof s != "undefined") document.getElementsByTagName("head")[0].appendChild(s);
-})(); /*-->*/ </script>
-<!-- end www.htmlcommentbox.com -->
+  <br><br>
+  <div id="disqus_thread"></div>
+  <script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function () { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://okadas-blog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
 
 </div>
-
-
 {% endblock %}

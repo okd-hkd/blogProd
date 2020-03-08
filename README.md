@@ -1,4 +1,3 @@
-
 ## This is my blog's source code.
 
 - A blog with RSS fucntion.
@@ -8,4 +7,4 @@
 - Access to SNS accounts.
 
 Here is the URL of the product.
-https://okd-blog.net/posts/
+https://okd-blog.net/
