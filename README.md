@@ -1,4 +1,10 @@
-## This is Teru OKada's blog's production code.
+## This is Teru my blog's production code.
 
-Please click to visit my blog.
+- A blog with RSS fucntion.
+- Auto-sitemap-creation for better SEO.
+- Personal work logs.
+- A contact form.
+- Access to SNS accounts.
+
+Here is the URL of the product.
 https://okd-blog.net/posts/
