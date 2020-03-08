@@ -7,4 +7,4 @@
 - Access to SNS accounts.
 
 Here is the URL of the product.
-https://okd-blog.net/posts/
+https://okd-blog.net/
