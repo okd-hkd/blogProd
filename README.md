@@ -5,6 +5,10 @@
 - Personal work logs.
 - A contact form.
 - Access to SNS accounts.
+- A comment form with DIsqus.
+- A Mark down editor.
+- Multi language support.
+- A Category sort functions
 
 Here is the URL of the product.
 https://okd-blog.net/
